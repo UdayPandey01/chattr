@@ -8,13 +8,15 @@ function getGoogleCredentials () {
     const clientSecret = process.env.GOOGLE_CLIENT_SECRET
 
     if(!clientId || clientId.length === 0){
+        console.error("Error: Missing GOOGLE_CLIENT_ID");
         throw new Error("Missing GOOGLE_CLIENT_ID")
     }
     if(!clientSecret || clientSecret.length === 0){
+        console.error("Error: Missing GOOGLE_CLIENT_SECRET");
         throw new Error("Missing GOOGLE_CLIENT_SECRET")
     }
-
-    return {clientId, clientSecret}
+    // console.log("Google Credentials Loaded:", { clientId, clientSecret });
+    return { clientId: clientId as string, clientSecret: clientSecret as string };
 }
 
 export const authOptions : NextAuthOptions = {
