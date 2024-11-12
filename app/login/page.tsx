@@ -14,7 +14,7 @@ const Page= () => {
         await signIn('google')
     } catch (error) {
         console.error(error)
-        toast.error('Something went wronng eith your login')
+        toast.error('Something went wronng with your login')
     }finally{
         setIsLoading(false)
     }
