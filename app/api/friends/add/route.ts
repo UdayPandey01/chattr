@@ -11,7 +11,7 @@ export async function POST(req: Request) {
 
     const { email: emailToAdd } = addFriendValidator.parse(body.email);
     const RESTResponse = await fetch(
-      `${process.env.UPSTASH_REDIS_REST_URL}/get/user:email${emailToAdd}`,
+      `${process.env.UPSTASH_REDIS_REST_URL}/get/user:email:${emailToAdd}`,
       {
         headers: {
           Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}`,
