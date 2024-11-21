@@ -1,4 +1,5 @@
 import { Icon, Icons } from "@/components/icons";
+import SignOutButton from "@/components/SignOutButton";
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
@@ -84,6 +85,7 @@ const Layout = async ({ children }: LayoutProps) => {
                     <span className="text-xs text-zinc-400" aria-hidden = 'true'>{session.user.email}</span>
                 </div>
               </div>
+              <SignOutButton className='h-full aspect-square'/>
             </li>
           </ul>
         </nav>
