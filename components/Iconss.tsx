@@ -1,6 +1,6 @@
 import { LucideProps, UserPlus } from 'lucide-react'
 
-export const Icons = {
+export const Iconss = {
   Logo: (props: LucideProps) => (
     <svg {...props} viewBox='0 0 2000 2000'>
       <path
@@ -12,4 +12,4 @@ export const Icons = {
   UserPlus
 }
 
-export type Icon = keyof typeof Icons
+export type Icon = keyof typeof Iconss

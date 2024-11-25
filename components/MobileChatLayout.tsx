@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, Fragment, useEffect, useState } from "react";
-import { Icons } from "./Icons";
+import { Icons } from "./Iconss";
 import SignOutButton from "./SignOutButton";
 import { Button, buttonVariants } from "./ui/button";
 import FriendRequestSidebarOptions from "./FriendRequestSideBarOption";
