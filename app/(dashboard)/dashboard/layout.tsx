@@ -1,4 +1,4 @@
-import { Icons } from "@/components/Iconss";
+import { Iconss } from "@/components/Iconss";
 import SignOutButton from "@/components/SignOutButton";
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
@@ -57,7 +57,7 @@ const Layout = async ({ children }: LayoutProps) => {
 
       <div className="hidden md:flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
         <Link href="/dashboard" className="flex h-16 shrink-0 items-center">
-          <Icons.Logo className="h-8 w-auto text-indigo-600" />
+          <Iconss.Logo className="h-8 w-auto text-indigo-600" />
         </Link>
 
         {friends.length > 0 ? (
@@ -78,7 +78,7 @@ const Layout = async ({ children }: LayoutProps) => {
 
               <ul role="list" className="-mx-2 mt-2 space-y-1">
                 {sidebarOptions.map((option) => {
-                  const Icon = Icons[option.Icon];
+                  const Icon = Iconss[option.Icon];
                   return (
                     <li key={option.id}>
                       <Link

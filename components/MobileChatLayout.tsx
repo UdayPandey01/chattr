@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, Fragment, useEffect, useState } from "react";
-import { Icons } from "./Iconss";
+import { Iconss } from "./Iconss";
 import SignOutButton from "./SignOutButton";
 import { Button, buttonVariants } from "./ui/button";
 import FriendRequestSidebarOptions from "./FriendRequestSideBarOption";
@@ -42,7 +42,7 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
           href="/dashboard"
           className={buttonVariants({ variant: "ghost" })}
         >
-          <Icons.Logo className="h-6 w-auto text-indigo-600" />
+          <Iconss.Logo className="h-6 w-auto text-indigo-600" />
         </Link>
         <Button onClick={() => setOpen(true)} className="gap-4">
           Menu <Menu className="h-6 w-6" />
@@ -110,7 +110,7 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
                               </div>
                               <ul role="list" className="-mx-2 mt-2 space-y-1">
                                 {sidebarOptions.map((option) => {
-                                  const Icon = Icons[option.Icon];
+                                  const Icon = Iconss[option.Icon];
                                   return (
                                     <li key={option.name}>
                                       <Link
