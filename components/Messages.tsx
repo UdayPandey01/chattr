@@ -35,7 +35,7 @@ const Messages = ({initialMessages, sessionId, sessionImg, chatPartner, chatId} 
           );
           pusherClient.unbind("incoming-message", messageHandler);
         };
-      }, []);
+      }, [chatId]);
 
     const scrollDownRef = useRef<HTMLDivElement | null>(null)
 
